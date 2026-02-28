@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div className="about-us">
+    <div className="about-us-container">
       <h1>About Paradise Nursery</h1>
       <p>
         Welcome to **Paradise Nursery**, your online plant shop dedicated to bringing nature to your doorstep. 

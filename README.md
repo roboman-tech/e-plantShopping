@@ -1,34 +1,31 @@
-# Paradise Nursery Shopping Cart
+# e-plantShopping
 
 ## Project Overview
 
-The final project is a dynamic web application for an online plant shop called **Paradise Nursery**. The application allows users to browse plants, view details such as images, names, descriptions, and prices, add plants to a shopping cart, and manage cart items.
+e-plantShopping is an online plant shopping application designed to offer customers a seamless experience when buying indoor and outdoor plants. This application allows users to browse through various categories of plants, add them to the cart, and complete their purchase.
 
 ## Features
 
-- **Product Browsing:** Users can view a variety of plants, with details including images, names, descriptions, and prices.
-- **Interactive Cart:** The shopping cart allows users to:
-  - Add plants to the cart.
-  - Remove plants from the cart.
-  - Adjust item quantities.
-- **Dynamic Updates:** Cart quantities are updated dynamically, and the total cost is recalculated automatically as items are added, removed, or adjusted.
-- **Navigation Bar:** A navigation bar provides easy access to different sections of the site.
+- Browse plants from multiple categories.
+- Add plants to the shopping cart.
+- View detailed information about each plant (name, price, description, etc.).
+- Update cart quantities.
+- Remove items from the cart.
+- Navigate easily between the product listing, cart, and home pages.
 
 ## Technologies Used
 
-- **Frontend:** React, JavaScript, HTML, CSS
-- **State Management:** React useState and useContext for handling cart state
-- **Other Libraries:** React Router for routing (if applicable)
-
-## Objective
-
-The project emphasizes implementing interactive features to build a functional and user-friendly e-commerce experience. The goal was to apply the skills learned in previous practice projects to create a dynamic, seamless shopping experience for users.
+- **Frontend:** React, Redux, React Router, HTML, CSS
+- **State Management:** Redux Toolkit
+- **Routing:** React Router DOM
 
 ## Installation
 
+To run this project locally, follow these steps:
+
 1. Clone the repository:
    ```bash
-   git clone https://github.com/roboman-tech/paradise-nursery.git
+   git clone https://github.com/your-username/e-plantShopping.git
 2. Navigate to the project directory:
    cd paradise-nursery
 3. Install dependencies:

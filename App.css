@@ -1,74 +1,50 @@
-/* App.css */
+import React, { useState } from 'react';
+import './App.css';
+import { Link } from 'react-router-dom'; // Optional if you're routing to another page
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
+const App = () => {
+  // State to manage whether to show the product list
+  const [showProductList, setShowProductList] = useState(false);
 
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+  const handleGetStartedClick = () => {
+    setShowProductList(true); // Set showProductList to true when "Get Started" is clicked
+  };
 
-.header {
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a slight overlay to the header */
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-}
+  return (
+    <div className="app-container">
+      {/* Landing Page Section */}
+      <div className="landing-page">
+        <div className="header">
+          <h1>Paradise Nursery</h1>
+          <p>Your online plant shop for all things green and beautiful!</p>
+        </div>
 
-.header h1 {
-  font-size: 3rem;
-  margin: 0;
-}
+        {!showProductList ? (
+          <div className="landing-page-content">
+            <h2>Welcome to Paradise Nursery</h2>
+            <p>Explore our wide selection of plants and bring nature into your home or garden.</p>
+            {/* "Get Started" button */}
+            <button onClick={handleGetStartedClick}>
+              Get Started
+            </button>
+          </div>
+        ) : (
+          <div>
+            {/* Display the product list when 'Get Started' is clicked */}
+            <h2>Our Plants</h2>
+            {/* You can replace this with your actual product list component */}
+            <p>Here is a list of our products...</p>
+            {/* Example: <ProductList /> */}
+          </div>
+        )}
+      </div>
 
-.header p {
-  font-size: 1.2rem;
-}
+      {/* Footer Section */}
+      <footer className="footer">
+        <p>© 2026 Paradise Nursery. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+};
 
-.landing-page {
-  background-image: url('https://example.com/your-background-image.jpg'); /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Keeps background in place during scrolling */
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  flex-grow: 1;
-}
-
-.landing-page h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.landing-page p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-.landing-page button {
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.landing-page button:hover {
-  background-color: #45a049;
-}
-
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-footer p {
-  margin: 0;
-}
+export default App;

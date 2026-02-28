@@ -1,16 +1,15 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateQuantity, removeItem } from './CartSlice'; // Actions from CartSlice
-import { useHistory } from 'react-router-dom'; // For navigation to the product listing page
 
 const CartItem = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items); // Get cart items from the Redux store
-  const history = useHistory();
 
   // Handle quantity increment
   const handleIncrement = (itemId) => {
-    dispatch(updateQuantity({ itemId, quantity: getItemQuantity(itemId) + 1 }));
+    const currentQuantity = getItemQuantity(itemId);
+    dispatch(updateQuantity({ itemId, quantity: currentQuantity + 1 }));
   };
 
   // Handle quantity decrement
@@ -70,7 +69,7 @@ const CartItem = () => {
 
       <div className="cart-actions">
         <button onClick={() => alert("Checkout coming soon!")}>Checkout</button>
-        <button onClick={() => history.push('/plants')}>Continue Shopping</button>
+        <button onClick={() => window.location.href = '/plants'}>Continue Shopping</button>
       </div>
     </div>
   );
